@@ -1,35 +1,114 @@
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+@keyframes fadeOut{
+    25%{
+        background-color: #404040;
+    }
+    50%{
+        background-color: #7f7f7f;
+    }
+    75%{
+        background-color: #bfbfbf
+    }
+    100%{
+        background-color: #ffffff
+    }
+}
 @font-face {
     font-family: "Rondo";
     src: url(./fonts/Rondo\ MN\ Regular.ttf);
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
 body{
     display: flex;
+    flex-direction: column;
     height: 97vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .etch-a-sketch{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: flex-end;
     background-color: red;
     border-radius: 36px;
+    min-height: 700px;
+    min-width: 760px;
 }
 .title{
-    padding-top: 28px;
     font-size: 48px;
     font-family: "Rondo";
 }
 .grid{
     display: flex;
-    margin: 28px 60px;
     border: 2px solid black;
     background-color: white;
 }
 .grid > .row > div{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border: 1px solid black;
     background-color: white;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.left-wheel, .right-wheel{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reset-button:hover{
+    transition: ease 0.07s all;
+    transform: scale(1.2);
+    background-color: rgba(211,211,211, 1);
+    cursor: pointer;
+}
+.reset-button{
+    padding: 6px;
+    font-family: "Lato";
+    border-radius: 10px;
+}
+
+.shake{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+button{
+    text-decoration: none;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    margin: 4px 0;  
+    font-family: "Lato";
+}
+button:hover{
+    transition: ease 0.07s all;
+    transform: scale(1.1);
+    background-color: rgba(211,211,211, 1);
 }

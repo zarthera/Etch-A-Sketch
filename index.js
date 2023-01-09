@@ -6,12 +6,13 @@ for (let i = 0; i < 32; i++) {
 
   for (let j = 0; j < 24; j++) {
     const tile = document.createElement("div");
-    tile.style.width = "20px";
-    tile.style.height = "20px";
-    tile.style.border = "1px solid black";
     row.appendChild(tile);
+    tile.addEventListener('mouseover', () =>{
+      tile.style.backgroundColor = "black"
+    })
   }
-
+  
   grid.appendChild(row);
 }
+
 

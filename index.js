@@ -12,13 +12,14 @@ function resizeGrid(width, height){
     for (let j = 0; j < height; j++) {
       const tile = document.createElement("div");
       tile.classList.add('tile')
+      tile.style.backgroundColor = "white"
       row.appendChild(tile);
     
       const resetButton = document.querySelector('.reset-button')
       resetButton.addEventListener('click', () =>{
         etchASketch.classList.add("shake")
         setTimeout(() => {
-          if(tile.style.backgroundColor !== ""){
+          if(tile.style.backgroundColor !== "white"){
             tile.style.animation = "fadeOut 1s ease", 400
           }
           setTimeout(() => {tile.style.animation = ""}, 500)

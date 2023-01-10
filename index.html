@@ -18,6 +18,22 @@
             <div class="left-wheel">
                 <div class="reset-button">Reset</div>
             </div>
+            <div class="colors-container">
+                <div class="colors-title">Colors</div>
+                <div class="colors">
+                    <button class="red" onclick="selectColor('rgb(255,0,0)')">Red</button>
+                    <button class="green" onclick="selectColor('rgb(0,255,0)')">Green</button>
+                    <button class="blue" onclick="selectColor('#0000FF')">Blue</button>
+                    <button class="orange" onclick="selectColor('#FFA500')">Orange</button>
+                    <button class="purple" onclick="selectColor('#A020F0')">Purple</button>
+                    <button class="yellow" onclick="selectColor('#FFFF00')">Yellow</button>
+                    
+                </div>
+                <div class="main-colors">
+                    <button class="psychadelic" onclick="selectColor(`psychadelic`)">Psychadelic</button>
+                    <button class="black" onclick="selectColor('#000000')">Black</button>
+                </div>
+            </div>
             <div class="right-wheel">
                 <button onclick="resizeGrid(40, 28)">40x28</button>
                 <button onclick="resizeGrid(32, 24)">32x24</button>
@@ -25,7 +41,12 @@
             </div>
         </div>
     </div>
-    <div class="copyright">Zachary Tartera</div>
+    <div class="copyright">
+        <div class="name">Zachary Tartera</div>
+        <div class="github-link">
+            <a href="https://github.com/zarthera"><img src="images/github-mark.png" alt="" style="width:24px;height:24px;"></a>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
